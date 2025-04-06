@@ -1,11 +1,11 @@
 import Image from "next/image"
-import Link from "next/link"
 import { Download, Music, Share2, Star, Zap } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import FeatureCard from "@/components/feature-card"
 import AppPreview from "@/components/app-preview"
 import TestimonialCard from "@/components/testimonial-card"
 import Footer from "@/components/footer"
+import ScrollLink from "@/components/scroll-link"
 
 export default function LandingPage() {
   return (
@@ -13,33 +13,44 @@ export default function LandingPage() {
       <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
           <div className="flex gap-6 md:gap-10">
-            <Link href="/" className="flex items-center space-x-2">
+            <ScrollLink href="#top" className="flex items-center space-x-2">
               <div className="relative h-8 w-8 overflow-hidden rounded-full bg-gradient-to-br from-purple-500 to-pink-500">
                 <Music className="absolute inset-0 m-auto h-5 w-5 text-white" />
               </div>
               <span className="inline-block font-bold">Ranktify</span>
-            </Link>
+            </ScrollLink>
           </div>
           <div className="flex flex-1 items-center justify-end space-x-4">
             <nav className="flex items-center space-x-1">
-              <Link href="#features" className="text-sm font-medium transition-colors hover:text-primary">
+              <ScrollLink
+                href="#features"
+                className="text-sm font-medium transition-colors hover:text-primary px-3 py-2"
+              >
                 Features
-              </Link>
-              <Link href="#benefits" className="text-sm font-medium transition-colors hover:text-primary">
+              </ScrollLink>
+              <ScrollLink
+                href="#benefits"
+                className="text-sm font-medium transition-colors hover:text-primary px-3 py-2"
+              >
                 Benefits
-              </Link>
-              <Link href="#testimonials" className="text-sm font-medium transition-colors hover:text-primary">
+              </ScrollLink>
+              <ScrollLink
+                href="#testimonials"
+                className="text-sm font-medium transition-colors hover:text-primary px-3 py-2"
+              >
                 Testimonials
-              </Link>
-              <Button size="sm" className="ml-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white">
-                Download
-              </Button>
+              </ScrollLink>
+              <ScrollLink href="#download">
+                <Button size="sm" className="ml-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white">
+                  Download
+                </Button>
+              </ScrollLink>
             </nav>
           </div>
         </div>
       </header>
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
+        <section id="top" className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
               <div className="flex flex-col justify-center space-y-4">
@@ -68,19 +79,13 @@ export default function LandingPage() {
               <div className="flex items-center justify-center">
                 <div className="relative h-[600px] w-[300px] overflow-hidden rounded-xl border-8 border-foreground/10 bg-background shadow-xl">
                   <Image
-                    src="/placeholder.svg?height=600&width=300"
+                    src="/images/app-screenshot.png"
                     width={300}
                     height={600}
-                    alt="Ranktify app screenshot"
+                    alt="Ranktify app screenshot showing a music ranking interface"
                     className="object-cover"
                     priority
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent">
-                    <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                      <p className="text-xs font-medium">Your Top Albums</p>
-                      <h3 className="text-lg font-bold">April 2025</h3>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -143,7 +148,7 @@ export default function LandingPage() {
                 <div className="grid grid-cols-2 gap-4">
                   <div className="flex flex-col gap-4">
                     <div className="rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 p-1">
-                      <div className="rounded-lg bg-white p-4 dark:bg-black">
+                      <div className="rounded-lg bg-white p-4">
                         <h3 className="font-bold text-purple-600">Top Albums</h3>
                         <ol className="mt-2 text-sm">
                           <li className="py-1">1. Album Name</li>
@@ -153,7 +158,7 @@ export default function LandingPage() {
                       </div>
                     </div>
                     <div className="rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 p-1">
-                      <div className="rounded-lg bg-white p-4 dark:bg-black">
+                      <div className="rounded-lg bg-white p-4">
                         <h3 className="font-bold text-purple-600">Top Artists</h3>
                         <ol className="mt-2 text-sm">
                           <li className="py-1">1. Artist Name</li>
@@ -165,7 +170,7 @@ export default function LandingPage() {
                   </div>
                   <div className="flex flex-col gap-4 mt-8">
                     <div className="rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 p-1">
-                      <div className="rounded-lg bg-white p-4 dark:bg-black">
+                      <div className="rounded-lg bg-white p-4">
                         <h3 className="font-bold text-purple-600">Top Songs</h3>
                         <ol className="mt-2 text-sm">
                           <li className="py-1">1. Song Name</li>
@@ -175,7 +180,7 @@ export default function LandingPage() {
                       </div>
                     </div>
                     <div className="rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 p-1">
-                      <div className="rounded-lg bg-white p-4 dark:bg-black">
+                      <div className="rounded-lg bg-white p-4">
                         <h3 className="font-bold text-purple-600">Genres</h3>
                         <div className="mt-2 flex flex-wrap gap-1 text-xs">
                           <span className="rounded-full bg-purple-100 px-2 py-1 text-purple-600">Rock</span>
@@ -265,7 +270,10 @@ export default function LandingPage() {
           </div>
         </section>
 
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-r from-purple-600 to-pink-600 text-white">
+        <section
+          id="download"
+          className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-r from-purple-600 to-pink-600 text-white"
+        >
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -279,7 +287,11 @@ export default function LandingPage() {
                   <Download className="mr-2 h-4 w-4" />
                   Download for iOS
                 </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-white text-white hover:bg-white/10 bg-transparent"
+                >
                   <Download className="mr-2 h-4 w-4" />
                   Download for Android
                 </Button>
