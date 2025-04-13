@@ -13,6 +13,10 @@ try {
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  ...(process.env.NODE_ENV === 'production' ? {
+    output: 'export',
+    basePath: '/ranktify',
+  } : {}),
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -22,6 +26,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  trailingSlash: true,
   experimental: {
     webpackBuildWorker: true,
     parallelServerBuildTraces: true,

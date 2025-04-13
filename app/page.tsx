@@ -77,7 +77,7 @@ export default function LandingPage() {
               <div className="flex items-center justify-center">
                 <div className="relative h-[600px] w-[300px] overflow-hidden rounded-xl border-8 border-foreground/10 bg-background shadow-xl">
                   <Image
-                    src="/images/SS1.PNG"
+                    src="/SS1.PNG"
                     width={300}
                     height={600}
                     alt="Ranktify app screenshot showing a music ranking interface"
@@ -137,7 +137,7 @@ export default function LandingPage() {
               <div className="flex flex-col md:flex-row items-center justify-center gap-8">
                 <div className="relative h-[400px] w-[200px] sm:h-[600px] sm:w-[300px] overflow-hidden rounded-xl border-8 border-foreground/10 bg-background shadow-xl">
                   <Image
-                    src="/images/SS2.PNG"
+                    src="/SS2.PNG"
                     width={300}
                     height={600}
                     alt="Ranktify interface preview"
@@ -146,7 +146,7 @@ export default function LandingPage() {
                 </div>
                 <div className="relative h-[400px] w-[200px] sm:h-[600px] sm:w-[300px] overflow-hidden rounded-xl border-8 border-foreground/10 bg-background shadow-xl">
                   <Image
-                    src="/images/SS3.PNG"
+                    src="/SS3.PNG"
                     width={300}
                     height={600}
                     alt="Ranktify interface preview"

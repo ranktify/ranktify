@@ -5,7 +5,7 @@ export default function AppPreview() {
     <div className="flex flex-col items-center justify-center lg:flex-row gap-8">
       <div className="relative h-[500px] w-[250px] overflow-hidden rounded-xl border-8 border-foreground/10 bg-background shadow-xl">
         <Image
-          src="/placeholder.svg?height=500&width=250"
+          src="/placeholder-logo.svg"
           width={250}
           height={500}
           alt="Ranktify app screenshot - ranking interface"
@@ -21,7 +21,7 @@ export default function AppPreview() {
 
       <div className="relative h-[500px] w-[250px] overflow-hidden rounded-xl border-8 border-foreground/10 bg-background shadow-xl">
         <Image
-          src="/placeholder.svg?height=500&width=250"
+          src="/placeholder-logo.svg"
           width={250}
           height={500}
           alt="Ranktify app screenshot - sharing interface"
@@ -37,7 +37,7 @@ export default function AppPreview() {
 
       <div className="relative h-[500px] w-[250px] overflow-hidden rounded-xl border-8 border-foreground/10 bg-background shadow-xl">
         <Image
-          src="/placeholder.svg?height=500&width=250"
+          src="/placeholder-logo.svg"
           width={250}
           height={500}
           alt="Ranktify app screenshot - discovery interface"
