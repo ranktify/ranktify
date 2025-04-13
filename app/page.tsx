@@ -1,9 +1,7 @@
 import Image from "next/image"
-import { Download, Music, Share2, Star, Zap } from "lucide-react"
+import { Database, Download, Globe, Music, Server, Share2, Star, Zap } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import FeatureCard from "@/components/feature-card"
-import AppPreview from "@/components/app-preview"
-import TestimonialCard from "@/components/testimonial-card"
 import Footer from "@/components/footer"
 import ScrollLink from "@/components/scroll-link"
 
@@ -35,10 +33,10 @@ export default function LandingPage() {
                 Benefits
               </ScrollLink>
               <ScrollLink
-                href="#testimonials"
+                href="#tech-stack"
                 className="text-sm font-medium transition-colors hover:text-primary px-3 py-2"
               >
-                Testimonials
+                Tech Stack
               </ScrollLink>
               <ScrollLink href="#download">
                 <Button size="sm" className="ml-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white">
@@ -79,7 +77,7 @@ export default function LandingPage() {
               <div className="flex items-center justify-center">
                 <div className="relative h-[600px] w-[300px] overflow-hidden rounded-xl border-8 border-foreground/10 bg-background shadow-xl">
                   <Image
-                    src="/images/app-screenshot.png"
+                    src="/images/SS1.PNG"
                     width={300}
                     height={600}
                     alt="Ranktify app screenshot showing a music ranking interface"
@@ -108,18 +106,18 @@ export default function LandingPage() {
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3">
               <FeatureCard
                 icon={<Star className="h-10 w-10 text-purple-600" />}
-                title="Create Rankings"
-                description="Easily rank your favorite songs, albums, and artists with our intuitive drag-and-drop interface."
+                title="Daily Music Rating"
+                description="Rate your recently played songs with our intuitive swipe interface and maintain daily streaks."
               />
               <FeatureCard
                 icon={<Share2 className="h-10 w-10 text-purple-600" />}
-                title="Share With Friends"
-                description="Share your rankings on social media or directly with friends to spark conversations."
+                title="Friend Recommendations"
+                description="Discover new music through your friends' ratings and get personalized playlists based on mutual preferences."
               />
               <FeatureCard
                 icon={<Zap className="h-10 w-10 text-purple-600" />}
-                title="Discover New Music"
-                description="Get personalized recommendations based on your rankings and preferences."
+                title="Music Communities"
+                description="Join communities of music enthusiasts, share your ratings, and engage in discussions about your favorite tracks."
               />
             </div>
           </div>
@@ -136,7 +134,26 @@ export default function LandingPage() {
               </div>
             </div>
             <div className="mx-auto py-12">
-              <AppPreview />
+              <div className="flex flex-col md:flex-row items-center justify-center gap-8">
+                <div className="relative h-[400px] w-[200px] sm:h-[600px] sm:w-[300px] overflow-hidden rounded-xl border-8 border-foreground/10 bg-background shadow-xl">
+                  <Image
+                    src="/images/SS2.PNG"
+                    width={300}
+                    height={600}
+                    alt="Ranktify interface preview"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative h-[400px] w-[200px] sm:h-[600px] sm:w-[300px] overflow-hidden rounded-xl border-8 border-foreground/10 bg-background shadow-xl">
+                  <Image
+                    src="/images/SS3.PNG"
+                    width={300}
+                    height={600}
+                    alt="Ranktify interface preview"
+                    className="object-cover"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -151,9 +168,9 @@ export default function LandingPage() {
                       <div className="rounded-lg bg-white p-4">
                         <h3 className="font-bold text-purple-600">Top Albums</h3>
                         <ol className="mt-2 text-sm">
-                          <li className="py-1">1. Album Name</li>
-                          <li className="py-1">2. Album Name</li>
-                          <li className="py-1">3. Album Name</li>
+                          <li className="py-1">1. DBTMF</li>
+                          <li className="py-1">2. Sayonara</li>
+                          <li className="py-1">3. Hurry Up Tomorrow</li>
                         </ol>
                       </div>
                     </div>
@@ -161,9 +178,9 @@ export default function LandingPage() {
                       <div className="rounded-lg bg-white p-4">
                         <h3 className="font-bold text-purple-600">Top Artists</h3>
                         <ol className="mt-2 text-sm">
-                          <li className="py-1">1. Artist Name</li>
-                          <li className="py-1">2. Artist Name</li>
-                          <li className="py-1">3. Artist Name</li>
+                          <li className="py-1">1. Masayoshi Takanaka</li>
+                          <li className="py-1">2. Alvaro Diaz</li>
+                          <li className="py-1">3. The Living Tombstone</li>
                         </ol>
                       </div>
                     </div>
@@ -173,9 +190,9 @@ export default function LandingPage() {
                       <div className="rounded-lg bg-white p-4">
                         <h3 className="font-bold text-purple-600">Top Songs</h3>
                         <ol className="mt-2 text-sm">
-                          <li className="py-1">1. Song Name</li>
-                          <li className="py-1">2. Song Name</li>
-                          <li className="py-1">3. Song Name</li>
+                          <li className="py-1">1. Gongoli (2012)</li>
+                          <li className="py-1">2. Pink Pony Club</li>
+                          <li className="py-1">3. 2:12 AM</li>
                         </ol>
                       </div>
                     </div>
@@ -237,34 +254,34 @@ export default function LandingPage() {
           </div>
         </section>
 
-        <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32">
+        <section id="tech-stack" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-purple-100 px-3 py-1 text-sm text-purple-600">
-                  Testimonials
+                  Tech Stack
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">Loved by music enthusiasts</h2>
+                <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">Built with modern technologies</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl">
-                  See what our users are saying about their experience with Ranktify.
+                  Our application is built using industry-standard technologies to ensure reliability, performance, and scalability.
                 </p>
               </div>
             </div>
             <div className="mx-auto grid max-w-5xl gap-6 py-12 lg:grid-cols-3">
-              <TestimonialCard
-                quote="Ranktify has completely changed how I organize my music. I love being able to rank my favorite albums and share them with friends."
-                author="Alex Johnson"
-                title="Music Blogger"
+              <FeatureCard
+                icon={<Globe className="h-10 w-10 text-purple-600" />}
+                title="Frontend"
+                description="Built with React Native and Expo for a seamless cross-platform mobile experience on both iOS and Android."
               />
-              <TestimonialCard
-                quote="The recommendation engine is spot on! I've discovered so many new artists that match my taste perfectly."
-                author="Sarah Williams"
-                title="Podcast Host"
+              <FeatureCard
+                icon={<Server className="h-10 w-10 text-purple-600" />}
+                title="Backend"
+                description="Powered by Go with Gin framework for high performance, reliability and type safety. Hosted on Heroku for scalability."
               />
-              <TestimonialCard
-                quote="As a DJ, I use Ranktify to keep track of my top tracks and share playlists with my audience. It's become an essential tool."
-                author="Marcus Chen"
-                title="Professional DJ"
+              <FeatureCard
+                icon={<Database className="h-10 w-10 text-purple-600" />}
+                title="Database"
+                description="PostgreSQL database with GORM, providing reliable data storage and efficient querying capabilities."
               />
             </div>
           </div>
