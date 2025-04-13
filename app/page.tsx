@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { Database, Download, Globe, Music, Server, Share2, Star, Zap } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { getImagePath } from "@/lib/utils"
 import FeatureCard from "@/components/feature-card"
 import Footer from "@/components/footer"
 import ScrollLink from "@/components/scroll-link"
@@ -77,7 +78,7 @@ export default function LandingPage() {
               <div className="flex items-center justify-center">
                 <div className="relative h-[600px] w-[300px] overflow-hidden rounded-xl border-8 border-foreground/10 bg-background shadow-xl">
                   <Image
-                    src="/SS1.PNG"
+                    src={getImagePath("/SS1.PNG")}
                     width={300}
                     height={600}
                     alt="Ranktify app screenshot showing a music ranking interface"
@@ -137,7 +138,7 @@ export default function LandingPage() {
               <div className="flex flex-col md:flex-row items-center justify-center gap-8">
                 <div className="relative h-[400px] w-[200px] sm:h-[600px] sm:w-[300px] overflow-hidden rounded-xl border-8 border-foreground/10 bg-background shadow-xl">
                   <Image
-                    src="/SS2.PNG"
+                    src={getImagePath("/SS2.PNG")}
                     width={300}
                     height={600}
                     alt="Ranktify interface preview"
@@ -146,7 +147,7 @@ export default function LandingPage() {
                 </div>
                 <div className="relative h-[400px] w-[200px] sm:h-[600px] sm:w-[300px] overflow-hidden rounded-xl border-8 border-foreground/10 bg-background shadow-xl">
                   <Image
-                    src="/SS3.PNG"
+                    src={getImagePath("/SS3.PNG")}
                     width={300}
                     height={600}
                     alt="Ranktify interface preview"

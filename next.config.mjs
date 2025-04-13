@@ -16,6 +16,7 @@ const nextConfig = {
   ...(process.env.NODE_ENV === 'production' ? {
     output: 'export',
     basePath: '/ranktify',
+    assetPrefix: '/ranktify/',
   } : {}),
   eslint: {
     ignoreDuringBuilds: true,
