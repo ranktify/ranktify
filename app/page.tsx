@@ -138,11 +138,21 @@ export default function LandingPage() {
               <div className="flex flex-col md:flex-row items-center justify-center gap-8">
                 <div className="relative h-[400px] w-[200px] sm:h-[600px] sm:w-[300px] overflow-hidden rounded-xl border-8 border-foreground/10 bg-background shadow-xl">
                   <Image
-                    src={getImagePath("/SS2.PNG")}
+                    src={getImagePath("/SS4.PNG")}
                     width={300}
                     height={600}
                     alt="Ranktify interface preview"
                     className="object-cover"
+                  />
+                </div>
+                <div className="relative h-[400px] w-[200px] sm:h-[600px] sm:w-[300px] overflow-hidden rounded-xl border-8 border-foreground/10 bg-background shadow-xl">
+                  <Image
+                    src={getImagePath("/SS2.PNG")}
+                    width={300}
+                    height={600}
+                    alt="Ranktify app screenshot showing a music ranking interface"
+                    className="object-cover"
+                    priority
                   />
                 </div>
                 <div className="relative h-[400px] w-[200px] sm:h-[600px] sm:w-[300px] overflow-hidden rounded-xl border-8 border-foreground/10 bg-background shadow-xl">
