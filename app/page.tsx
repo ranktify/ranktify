@@ -179,7 +179,7 @@ export default function LandingPage() {
                       <div className="rounded-lg bg-white p-4">
                         <h3 className="font-bold text-purple-600">Top Albums</h3>
                         <ol className="mt-2 text-sm">
-                          <li className="py-1">1. DBTMF</li>
+                          <li className="py-1">1. DTMF</li>
                           <li className="py-1">2. Sayonara</li>
                           <li className="py-1">3. Hurry Up Tomorrow</li>
                         </ol>
